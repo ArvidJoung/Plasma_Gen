@@ -95,6 +95,7 @@ void MX_TIM1_Init(void)
     _Error_Handler(__FILE__, __LINE__);
   }
 
+  sConfigOC.OCPolarity = TIM_OCPOLARITY_LOW;
   if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_4) != HAL_OK)
   {
     _Error_Handler(__FILE__, __LINE__);
