@@ -107,10 +107,19 @@
 #define configUSE_16_BIT_TICKS                   0
 #define configUSE_MUTEXES                        1
 #define configQUEUE_REGISTRY_SIZE                8
+#define configUSE_RECURSIVE_MUTEXES              1
+#define configUSE_COUNTING_SEMAPHORES            1
+#define configUSE_QUEUE_SETS					 1	// Arvid 20171228 added code
 
 /* Co-routine definitions. */
 #define configUSE_CO_ROUTINES                    0
 #define configMAX_CO_ROUTINE_PRIORITIES          ( 2 )
+
+/* Software timer definitions. */
+#define configUSE_TIMERS                         1
+#define configTIMER_TASK_PRIORITY                ( configMAX_PRIORITIES - 1 ) // ( 6 )
+#define configTIMER_QUEUE_LENGTH                 20
+#define configTIMER_TASK_STACK_DEPTH             ( configMINIMAL_STACK_SIZE*2 )  // 384
 
 /* Set the following definitions to 1 to include the API function, or zero
 to exclude the API function. */
